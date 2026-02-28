@@ -84,7 +84,7 @@ resource "google_discovery_engine_search_engine" "basic" {
     "disable-agent-sharing" = "FEATURE_STATE_OFF"
   }
   knowledge_graph_config {
-    enable_cloud_knowledge_graph = true
+    enable_cloud_knowledge_graph = false
     enable_private_knowledge_graph = true
   }
 }
@@ -136,7 +136,7 @@ resource "google_discovery_engine_search_engine" "basic" {
   knowledge_graph_config {
     enable_cloud_knowledge_graph = false
     cloud_knowledge_graph_types = ["foobar"]
-    enable_private_knowledge_graph = false
+    enable_private_knowledge_graph = true
     feature_config {
       disable_private_kg_query_understanding = true
       disable_private_kg_enrichment = true
